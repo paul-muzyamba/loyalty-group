@@ -39,17 +39,17 @@
   }
 
   /**
-   * 3. Native Persistent Dark Mode UI Toggle Controller
+   * 3. Native Persistent Dark Mode UI Toggle Controller (Default: Light Mode)
    */
   function initDarkMode() {
     const toggleBtn = document.getElementById('themeToggle');
     if (!toggleBtn) return;
 
-    // Check system fallback settings or cached preferences
+    // Check only for an explicit, previously saved choice in storage
     const savedTheme = localStorage.getItem('loyalty-theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+    // Explicitly default to light mode unless they already clicked dark mode in the past
+    if (savedTheme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
       toggleBtn.textContent = '☀️';
       toggleBtn.setAttribute('aria-label', 'Switch to Light Mode');
