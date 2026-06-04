@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Architectural site map indexing routing link configuration
+Sitemap: https://yourdomain.com/sitemap.xml
