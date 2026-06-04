@@ -252,6 +252,7 @@ img, picture {
 .site-header {
   position: sticky;
   top: 0;
+  position: relative; /* ADD THIS: Fixes absolute positioning anchor point on Chrome mobile */
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
@@ -342,7 +343,7 @@ img, picture {
 .hamburger::after { top: 6px; }
 
 /* ==========================================================================
-   UPDATED: MOBILE DROPDOWN ENGINE (Replaces the old sidebar logic)
+   UPDATED: UNIVERSAL MOBILE DROPDOWN ENGINE (Vercel/Chrome Hotfix)
    ========================================================================== */
 @media (max-width: 768px) {
   .nav-toggle {
@@ -351,37 +352,38 @@ img, picture {
 
   .nav-menu {
     position: absolute;
-    top: 80px; /* Aligns perfectly right underneath the 80px navbar header */
+    top: 80px; 
     left: 0;
     width: 100%;
     
-    /* Smooth vertical accordion drop collapse initialization */
+    /* Hardware-accelerated dropdown rendering engine */
     max-height: 0;
     opacity: 0;
     overflow: hidden;
     visibility: hidden;
     
-    /* Menu inner layout transformation */
     flex-direction: column;
     align-items: stretch;
     background-color: var(--color-background);
     padding: 0 var(--space-md);
     border-bottom: 0px solid var(--color-border);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     
-    /* Unified animation timing framework */
     transition: max-height var(--transition-slow), 
                 opacity var(--transition-base), 
                 padding var(--transition-base),
                 visibility var(--transition-base);
+    z-index: 999;
   }
 
-  /* Trigger state managed dynamically by your JavaScript main.js bundle */
-  .nav-open .nav-menu {
-    max-height: 400px; /* Safe breathing room ceiling limit for link list stack */
-    opacity: 1;
-    visibility: visible;
-    padding: var(--space-md);
+  /* CATCH-ALL TARGETS: Catches .nav-open if applied to body, header, or toggle element */
+  .nav-open .nav-menu,
+  .site-header.nav-open .nav-menu,
+  body.nav-open .nav-menu {
+    max-height: 450px !important; /* Forces vertical growth on mobile screen layout */
+    opacity: 1 !important;
+    visibility: visible !important;
+    padding: var(--space-md) !important;
     border-bottom: 1px solid var(--color-border);
   }
 
@@ -395,19 +397,22 @@ img, picture {
     padding: var(--space-sm) 0 !important;
   }
 
-  /* Structural Hamburger Transformation State */
-  .nav-open .hamburger {
-    background-color: transparent;
+  /* Hamburger Animators */
+  .nav-open .hamburger,
+  body.nav-open .hamburger {
+    background-color: transparent !important;
   }
 
-  .nav-open .hamburger::before {
-    top: 0;
-    transform: rotate(45deg);
+  .nav-open .hamburger::before,
+  body.nav-open .hamburger::before {
+    top: 0 !important;
+    transform: rotate(45deg) !important;
   }
 
-  .nav-open .hamburger::after {
-    top: 0;
-    transform: rotate(-45deg);
+  .nav-open .hamburger::after,
+  body.nav-open .hamburger::after {
+    top: 0 !important;
+    transform: rotate(-45deg) !important;
   }
 }
 
