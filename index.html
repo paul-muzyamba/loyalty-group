@@ -35,16 +35,56 @@
 
   <!-- Core Gateway Dual Split Hub Section Container -->
   <main>
-    <section class="hub-hero section-padding">
-      <div class="container">
-        <div class="text-center max-w-600" style="margin-bottom: var(--space-lg);">
-          <h1 style="margin-bottom: var(--space-sm);">An Ecosystem Built on Unwavering Trust</h1>
-          <p>Established in 2022 under the stewardship of CEO Isaac Loyalty Simbeye, Loyalty Group securely anchors ethical deployment channels bridging fair capital access metrics and premium life-enhancing corporate pharmaceutical frameworks.</p>
+    <!-- HERO SECTION: Pharmacy.jpg as full-bleed background with layered overlay -->
+    <section class="hub-hero section-padding" style="
+      position: relative;
+      background-image: url('assests/images/Home Balance.jpg');
+      background-size: 101%;
+      background-position: center -200%;
+      background-repeat: no-repeat;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    ">
+      <!-- Dark gradient overlay for legibility — two-layer: bottom-to-top dark base + subtle green tint at top -->
+      <div style="
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(10, 30, 10, 0.72) 0%,
+          rgba(10, 30, 10, 0.55) 40%,
+          rgba(10, 30, 10, 0.80) 100%
+        );
+        z-index: 0;
+      "></div>
+      <!-- Subtle green accent bar at top edge for brand anchoring -->
+      <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--color-primary),var(--color-secondary));z-index:2;"></div>
+
+      <div class="container" style="position: relative; z-index: 1;">
+        <div class="text-center max-w-600" style="margin: 0 auto var(--space-lg) auto;">
+          <!-- Eyebrow label -->
+          <span style="
+            display: inline-block;
+            background: rgba(82,196,26,0.18);
+            border: 1px solid var(--color-primary);
+            color: var(--color-primary);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            margin-bottom: var(--space-sm);
+          ">Zambia's Dual-Division Ethical Enterprise</span>
+          <h1 style="margin-bottom: var(--space-sm); color: #ffffff; text-shadow: 0 2px 16px rgba(0,0,0,0.45);">An Ecosystem Built on Unwavering Trust</h1>
+          <p style="color: rgba(255,255,255,0.88); font-size: 1.1rem; line-height: 1.7;">Established in 2022 under the stewardship of CEO Isaac Loyalty Simbeye, Loyalty Group securely anchors ethical deployment channels bridging fair capital access metrics and premium life-enhancing corporate pharmaceutical frameworks.</p>
         </div>
 
         <div class="gateway-split">
           <!-- Gateway Node A: Loyalty Micro Finance -->
-          <article class="gateway-card finance">
+          <article class="gateway-card finance" style="background: rgba(255,255,255,0.96); backdrop-filter: blur(8px);">
             <div class="gateway-content">
               <span class="gateway-badge">Capital Architecture</span>
               <h2>Loyalty Micro Finance</h2>
@@ -57,7 +97,7 @@
           </article>
 
           <!-- Gateway Node B: Loyalty Health Care -->
-          <article class="gateway-card health">
+          <article class="gateway-card health" style="background: rgba(255,255,255,0.96); backdrop-filter: blur(8px);">
             <div class="gateway-content">
               <span class="gateway-badge">Pharmaceutical Care</span>
               <h2>Loyalty Health Care</h2>

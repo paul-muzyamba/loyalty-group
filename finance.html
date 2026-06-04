@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loyalty Micro Finance — Fair & Accessible Capital Solutions</title>
+  <title>Loyalty Micro Finance — Fair &amp; Accessible Capital Solutions</title>
   <meta name="description" content="Transparent, compliant microfinance lending frameworks throughout Zambia with zero hidden operational catches. Direct access to fair capital structures.">
   <link rel="stylesheet" href="assests/css/style.css">
 </head>
@@ -35,12 +35,32 @@
 
   <!-- Main Corporate Content Track Container -->
   <main>
-    <header class="division-hero-header">
-      <div class="container">
+
+    <!-- HERO: Loan Cash.jpg as full-bleed division hero background -->
+    <header class="division-hero-header" style="
+      position: relative;
+      background-image: url('assests/images/Loan Cash.jpg');
+      background-size: cover;
+      background-position: center 45%;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    ">
+      <!-- Dark overlay with warm-green brand tint for Micro Finance tone -->
+      <div style="
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(20, 60, 20, 0.82) 0%,
+          rgba(10, 35, 10, 0.74) 100%
+        );
+        z-index: 0;
+      "></div>
+      <div class="container" style="position: relative; z-index: 1;">
         <img src="assests/images/WhatsApp Image 2026-06-04 at 11.20.33 (1).jpeg" alt="Loyalty Micro Finance Corporate Logo Mark" class="division-logo">
-        <h1>Loyalty Micro Finance</h1>
-        <p class="max-w-600" style="font-weight: 600; color: var(--color-secondary); font-size: 1.2rem;">"Empowering Your Financial Future"</p>
-        <p class="max-w-600">Dismantling high barriers to fair funding. We deliver absolute clarity and transparent lending systems constructed specifically for local development parameters.</p>
+        <h1 style="color: #ffffff; text-shadow: 0 2px 12px rgba(0,0,0,0.4);">Loyalty Micro Finance</h1>
+        <p class="max-w-600" style="font-weight: 600; color: var(--color-primary); font-size: 1.2rem;">"Empowering Your Financial Future"</p>
+        <p class="max-w-600" style="color: rgba(255,255,255,0.88);">Dismantling high barriers to fair funding. We deliver absolute clarity and transparent lending systems constructed specifically for local development parameters.</p>
       </div>
     </header>
 
@@ -65,32 +85,79 @@
       </div>
     </section>
 
-    <!-- NEW SECTION: Detailed Capital & Loan Services Portfolio -->
+    <!-- Loan Portfolios Section: Deal.jpg as full-width illustrative visual separator -->
     <section class="section-padding" style="background-color: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
       <div class="container">
-        <div class="text-center max-w-600" style="margin-bottom: var(--space-lg);">
-          <span style="font-weight: 700; color: var(--color-secondary); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Tailored Credit Options</span>
-          <h2 style="margin-top: var(--space-xs);">Our Structured Loan Portfolios</h2>
-          <p>We provide clear, ethical financial mechanisms designed to support both individual turning points and corporate expansion across Zambia.</p>
+
+        <!-- Deal.jpg: Full-width trust/partnership image strip with text overlay -->
+        <div style="
+          border-radius: var(--radius-md);
+          overflow: hidden;
+          margin-bottom: var(--space-lg);
+          max-height: 260px;
+          box-shadow: var(--shadow-card);
+          position: relative;
+        ">
+          <img
+            src="assests/images/Deal.jpg"
+            alt="Professional handshake symbolising transparent and trustworthy lending agreements"
+            style="width: 100%; height: 260px; object-fit: cover; object-position: center 40%; display: block;"
+          >
+          <div style="
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(20,60,20,0.78) 0%, rgba(0,0,0,0.2) 100%);
+            display: flex;
+            align-items: center;
+            padding: 0 var(--space-lg);
+          ">
+            <div>
+              <span style="display:inline-block; background: rgba(82,196,26,0.2); border: 1px solid var(--color-primary); color: var(--color-primary); font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 50px; margin-bottom: var(--space-xs);">Tailored Credit Options</span>
+              <h2 style="color: #ffffff; margin-top: var(--space-xs); text-shadow: 0 1px 8px rgba(0,0,0,0.5);">Our Structured Loan Portfolios</h2>
+              <p style="color: rgba(255,255,255,0.85); max-width: 460px; font-size: 0.95rem;">Clear, ethical financial mechanisms designed to support individuals and businesses across Zambia.</p>
+            </div>
+          </div>
         </div>
 
         <div class="grid-2">
-          <!-- Portfolio Node 1: Individual & Personal Loans -->
-          <div class="card" style="background-color: var(--color-background); padding: var(--space-md);">
-            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-xs);">
-              <div style="font-size: 2rem; color: var(--color-secondary);">&#128100;</div>
-              <h3>Individual &amp; Personal Loans</h3>
+          <!-- Portfolio Node 1: Individual & Personal Loans — Loan Agreement.jpg as card image -->
+          <div class="card" style="background-color: var(--color-background); padding: 0; overflow: hidden;">
+            <div style="overflow: hidden; height: 200px;">
+              <img
+                src="assests/images/Loan Agreement.jpg"
+                alt="Loan agreement document representing individual and personal lending services"
+                style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'"
+              >
             </div>
-            <p>Designed to help you navigate personal milestones, emergency expenses, or unexpected bills with dignity. We offer accessible structures with straightforward terms, ensuring your repayment plan remains completely manageable without hidden administrative premiums.</p>
+            <div style="padding: var(--space-md);">
+              <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-xs);">
+                <div style="font-size: 2rem; color: var(--color-secondary);">&#128100;</div>
+                <h3>Individual &amp; Personal Loans</h3>
+              </div>
+              <p>Designed to help you navigate personal milestones, emergency expenses, or unexpected bills with dignity. We offer accessible structures with straightforward terms, ensuring your repayment plan remains completely manageable without hidden administrative premiums.</p>
+            </div>
           </div>
 
-          <!-- Portfolio Node 2: SME & Business Growth Capital -->
-          <div class="card" style="background-color: var(--color-background); padding: var(--space-md);">
-            <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-xs);">
-              <div style="font-size: 2rem; color: var(--color-secondary);">&#128188;</div>
-              <h3>SME &amp; Business Growth Capital</h3>
+          <!-- Portfolio Node 2: SME & Business Growth Capital — Loan Estimate.jpg as card image -->
+          <div class="card" style="background-color: var(--color-background); padding: 0; overflow: hidden;">
+            <div style="overflow: hidden; height: 200px;">
+              <img
+                src="assests/images/Loan Estimate.jpg"
+                alt="Financial estimate document representing SME and business growth capital services"
+                style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'"
+              >
             </div>
-            <p>Empowering local businesses and entrepreneurs to unlock true execution capability. Whether you need to manage inventory, optimize supply chains, or scale operations, our credit facilities bypass rigid legacy metrics to adapt directly to your business cash flow cycles.</p>
+            <div style="padding: var(--space-md);">
+              <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-xs);">
+                <div style="font-size: 2rem; color: var(--color-secondary);">&#128188;</div>
+                <h3>SME &amp; Business Growth Capital</h3>
+              </div>
+              <p>Empowering local businesses and entrepreneurs to unlock true execution capability. Whether you need to manage inventory, optimize supply chains, or scale operations, our credit facilities bypass rigid legacy metrics to adapt directly to your business cash flow cycles.</p>
+            </div>
           </div>
         </div>
       </div>

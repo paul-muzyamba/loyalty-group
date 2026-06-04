@@ -35,64 +35,188 @@
 
   <!-- Core Content Structure Context Segment Area -->
   <main>
-      <header class="division-hero-header">
-        <div class="container">
-          <img src="assests/images/WhatsApp Image 2026-06-04 at 11.20.33.jpeg" alt="Loyalty Health Care Corporate Wordmark Asset Logo" class="division-logo" style="max-height: 160px; max-width: 320px; width: 100%;">
-          <h1>Loyalty Health Care</h1>
-          <p class="max-w-600" style="font-weight: 600; color: var(--color-secondary); font-size: 1.2rem;">Premium Care. Unwavering Ethical Integrity.</p>
-          <p class="max-w-600">Bridging critical local supply vacuums through rigorous procurement processes and high-grade cold chain delivery systems. Patient trust remains our singular priority metric.</p>
-        </div>
-      </header>
+
+    <!-- HERO: Medicine.jpg full-bleed background for Health Care division page -->
+    <header class="division-hero-header" style="
+      position: relative;
+      background-image: url('assests/images/Pharmacy.jpg');
+      background-size: cover;
+      background-position: center 35%;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    ">
+      <!-- Deep forest-green gradient overlay reinforcing brand colour -->
+      <div style="
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(27, 94, 32, 0.85) 0%,
+          rgba(10, 40, 10, 0.78) 100%
+        );
+        z-index: 0;
+      "></div>
+      <div class="container" style="position: relative; z-index: 1;">
+        <img src="assests/images/WhatsApp Image 2026-06-04 at 11.20.33.jpeg" alt="Loyalty Health Care Corporate Wordmark Asset Logo" class="division-logo" style="max-height: 160px; max-width: 320px; width: 100%;">
+        <h1 style="color:#ffffff; text-shadow: 0 2px 12px rgba(0,0,0,0.4);">Loyalty Health Care</h1>
+        <p class="max-w-600" style="font-weight: 600; color: var(--color-primary); font-size: 1.2rem;">Premium Care. Unwavering Ethical Integrity.</p>
+        <p class="max-w-600" style="color: rgba(255,255,255,0.88);">Dedicated to your well-being, we provide personalized care, expert medication management, and a welcoming environment where your health is always our priority.</p>
+      </div>
+    </header>
 
     <!-- Services Profiles Matrix Overview Display Cards -->
     <section class="container section-padding">
-      <div class="text-center max-w-600" style="margin-bottom: var(--space-lg);">
-        <h2>Pharmaceutical Delivery Categories</h2>
-        <p>Providing pristine supply security directly to regional clinical distribution environments, public health outposts, and local dispensary nodes.</p>
+      <div class="text-center max-w-600" style="margin-bottom: var(--space-lg); margin-left: auto; margin-right: auto;">
+        <h2>Comprehensive Pharmacy Services</h2>
+        <p>We provide highly specialized patient-facing clinical pharmacy care to ensure optimal therapeutic outcomes at the point of fulfillment.</p>
       </div>
 
       <div class="grid-3">
-        <!-- Service Block Alpha Entry Point -->
-        <article class="card">
-          <div style="font-size: 2rem; margin-bottom: var(--space-xs); color: var(--color-secondary);">&#128138;</div>
-          <h3>Essential Procurement</h3>
-          <p>Meticulously sourced primary care therapeutics, generic prescription formulations, and viral management supplies selected across globally certified compounding environments.</p>
+        <!-- Service Block Alpha: Essential Procurement — Stethoscope.jpg as visual anchor -->
+        <article class="card" style="overflow: hidden; padding: 0;">
+          <div style="overflow: hidden; height: 180px;">
+            <img
+              src="assests/images/Medicine3.jpg"
+              alt="Medical stethoscope representing essential procurement services"
+              style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.4s ease;"
+              onmouseover="this.style.transform='scale(1.06)'"
+              onmouseout="this.style.transform='scale(1)'"
+            >
+          </div>
+          <div style="padding: var(--space-md);">
+            <div style="font-size: 2rem; margin-bottom: var(--space-xs); color: var(--color-secondary);">💊</div>
+            <h3>Clinical Dispensing</h3>
+            <p>Accurate, rapid fulfillment of complex prescriptions with comprehensive safety checks for drug interactions, precise dosage validations, and strict adherence to all national guidelines.</p>
+          </div>
         </article>
 
-        <!-- Service Block Beta Entry Point -->
-        <article class="card">
-          <div style="font-size: 2rem; margin-bottom: var(--space-xs); color: var(--color-secondary);">&#129482;</div>
-          <h3>Cold Chain Logistics</h3>
-          <p>State-of-the-art temperature monitoring architectures guarantee absolute molecular stability from bulk processing arrivals directly into deep clinical theater applications.</p>
+        <!-- Service Block Beta: Cold Chain Logistics — Medicine2.jpg as visual anchor -->
+        <article class="card" style="overflow: hidden; padding: 0;">
+          <div style="overflow: hidden; height: 180px;">
+            <img
+              src="assests/images/Counselling.jpg"
+              alt="Pharmaceutical products representing cold chain and medicine logistics"
+              style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.4s ease;"
+              onmouseover="this.style.transform='scale(1.06)'"
+              onmouseout="this.style.transform='scale(1)'"
+            >
+          </div>
+          <div style="padding: var(--space-md);">
+            <div style="font-size: 2rem; margin-bottom: var(--space-xs); color: var(--color-secondary);">🧑‍⚕️</div>
+            <h3>Medication Therapy Management</h3>
+            <p>Direct patient counseling and chronic disease management programming. Our certified pharmacists work directly with patients to maximize drug efficacy and optimize care plans.</p>
+          </div>
         </article>
 
-        <!-- Service Block Gamma Entry Point -->
-        <article class="card">
-          <div style="font-size: 2rem; margin-bottom: var(--space-xs); color: var(--color-secondary);">&#128101;</div>
-          <h3>Institutional Supply</h3>
-          <p>Comprehensive programmatic allocation systems mapped accurately to hospital groups, supporting regional emergency storage infrastructure with immediate restocks.</p>
+        <!-- Service Block Gamma: Institutional Supply — Doctor Man.jpg as visual anchor -->
+        <article class="card" style="overflow: hidden; padding: 0;">
+          <div style="overflow: hidden; height: 180px;">
+            <img
+              src="assests/images/Consulting.jpg"
+              alt="Medical professional representing institutional supply and hospital services"
+              style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; transition: transform 0.4s ease;"
+              onmouseover="this.style.transform='scale(1.06)'"
+              onmouseout="this.style.transform='scale(1)'"
+            >
+          </div>
+          <div style="padding: var(--space-md);">
+            <div style="font-size: 2rem; margin-bottom: var(--space-xs); color: var(--color-secondary);">🏥</div>
+            <h3>OTC & Wellness Consulting</h3>
+            <p>Expert, on-site guidance on over-the-counter therapeutics, preventive health supplements, and foundational wellness products, bridging the gap between clinical care and daily health.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: Comprehensive Pharmacy Services -->
+    <section class="container section-padding" style="padding-top: 0;">
+      <div class="text-center max-w-600" style="margin-bottom: var(--space-lg); margin-left: auto; margin-right: auto;">
+        <h2>Additional Pharmacy Services</h2>
+        <p>Some added services we provide include but are not limited to:</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Service Block Delta: Clinical Dispensing -->
+        <article class="card" style="border-top: 4px solid var(--color-primary);">
+          <div style="padding: var(--space-md);">
+            <div style="font-size: 2rem; margin-bottom: var(--space-xs); color: var(--color-secondary);">⚕️</div>
+            <h3>Clinical & Preventative Services</h3>
+            <p>
+                Health Screenings: Quick and convenient walk-in checks for blood pressure, blood glucose (diabetes), cholesterol, and BMI.
+            </p>
+          </div>
+        </article>
+
+        <!-- Service Block Epsilon: Medication Therapy Management -->
+        <article class="card" style="border-top: 4px solid var(--color-primary);">
+          <div style="padding: var(--space-md);">
+            <div style="font-size: 2rem; margin-bottom: var(--space-xs); color: var(--color-secondary);">🧑‍⚕️</div>
+            <h3>Minor Ailment Triage</h3>
+            <p> 
+              Consultations and supply of prescription-strength or OTC medications for minor ailments like colds, flu, sore throats, earaches, and skin conditions.
+            </p>
+          </div>
+        </article>
+
+        <!-- Service Block Zeta: OTC & Wellness Consulting -->
+        <article class="card" style="border-top: 4px solid var(--color-primary);">
+          <div style="padding: var(--space-md);">
+            <div style="font-size: 2rem; margin-bottom: var(--space-xs); color: var(--color-secondary);">🌿</div>
+            <h3>Specialized Care</h3>
+            <p>Expert, on-site guidance on over-the-counter therapeutics, preventive health supplements, and foundational wellness products, bridging the gap between clinical care and daily health.</p>
+          </div>
         </article>
       </div>
     </section>
 
     <!-- Trust Badges Signal System Panel Section Layer -->
+    <!-- Stethoscope2.jpg as a full-width illustrative visual above trust pillars -->
     <section class="section-padding" style="background-color: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
       <div class="container">
-        <h2 class="text-center" style="margin-bottom: var(--space-lg);">Absolute Operational Trust Identifiers</h2>
-        
+
+        <!-- Decorative image strip: Stethoscope2 placed as a premium visual separator above the trust icons -->
+        <div style="
+          border-radius: var(--radius-md);
+          overflow: hidden;
+          margin-bottom: var(--space-lg);
+          max-height: 280px;
+          box-shadow: var(--shadow-card);
+          position: relative;
+        ">
+          <img
+            src="assests/images/Stethoscope2.jpg"
+            alt="Close-up of a stethoscope symbolising precision medical care and compliance"
+            style="width: 100%; height: 280px; object-fit: cover; object-position: center 30%; display: block;"
+          >
+          <!-- Text overlay on the image strip -->
+          <div style="
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(27,94,32,0.75) 0%, rgba(0,0,0,0.25) 100%);
+            display: flex;
+            align-items: center;
+            padding: 0 var(--space-lg);
+          ">
+            <div>
+              <h2 style="color: #ffffff; margin-bottom: var(--space-xs); text-shadow: 0 1px 8px rgba(0,0,0,0.5);">Absolute Operational Trust Identifiers</h2>
+              <p style="color: rgba(255,255,255,0.85); max-width: 480px; font-size: 0.95rem;">Every process, every batch, every delivery — built on accountability.</p>
+            </div>
+          </div>
+        </div>
+
         <div class="grid-3 text-center">
           <div>
-            <div style="font-size: 3rem; line-height: 1; margin-bottom: var(--space-xs); color: var(--color-secondary);">&#9398;</div>
+            <div style="font-size: 3rem; line-height: 1; margin-bottom: var(--space-xs); color: var(--color-secondary);">Ⓐ</div>
             <h4 style="font-size: 1.2rem;">Absolute Compliance</h4>
             <p style="font-size: 0.95rem;">100% real-time alignment with the Zambia Medicines Regulatory Authority (ZAMRA) licensing, protocol standards, and verification frameworks.</p>
           </div>
           <div>
-            <div style="font-size: 3rem; line-height: 1; margin-bottom: var(--space-xs); color: var(--color-secondary);">&#10004;</div>
+            <div style="font-size: 3rem; line-height: 1; margin-bottom: var(--space-xs); color: var(--color-secondary);">✔</div>
             <h4 style="font-size: 1.2rem;">Verified Audited Sourcing</h4>
             <p style="font-size: 0.95rem;">We execute exhaustive physical site validations on international manufacturers, completely purging compromised or counter-market batches from entering local systems.</p>
           </div>
           <div>
-            <div style="font-size: 3rem; line-height: 1; margin-bottom: var(--space-xs); color: var(--color-secondary);">&#10084;</div>
+            <div style="font-size: 3rem; line-height: 1; margin-bottom: var(--space-xs); color: var(--color-secondary);">❤</div>
             <h4 style="font-size: 1.2rem;">Human-Centric Empathy</h4>
             <p style="font-size: 0.95rem;">We prioritize the continuous distribution of life-saving therapeutics above pure transactional profit optimizations during regional supply challenges.</p>
           </div>
@@ -100,19 +224,35 @@
       </div>
     </section>
 
-    <!-- Compliance Ethics Statement Subsection Layout Blocks -->
+    <!-- Compliance Ethics Statement Subsection — Doctor Lady.jpg as a side visual -->
     <section class="container section-padding">
-      <div class="card" style="border-left: 6px solid var(--color-secondary); padding: var(--space-lg);">
-        <span style="font-weight: 700; text-transform: uppercase; color: var(--color-secondary); letter-spacing: 1px; font-size: 0.85rem;">Meticulous Regulatory Commitment</span>
-        <h2 style="margin-top: var(--space-xs); margin-bottom: var(--space-md);">Healthcare Security Requires Strict Integrity</h2>
-        <p>At Loyalty Health Care, we firmly assert that compromised quality in pharmaceutical distribution constitutes an absolute human failure. Every batch number registered across our logistics facilities is tracked through a strict chain of custody, ensuring our healthcare systems maintain elite standards without compromise.</p>
-        <p style="font-weight: 600; color: var(--color-text);">— Managed Institutional Directive, Division Oversight Board</p>
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: var(--space-md); align-items: center;">
+        <!-- Doctor Lady image in a portrait frame beside the quote block -->
+        <div style="
+          border-radius: var(--radius-md);
+          overflow: hidden;
+          box-shadow: var(--shadow-card);
+          aspect-ratio: 3/4;
+          max-height: 360px;
+        ">
+          <img
+            src="assests/images/Doctor Lady.jpg"
+            alt="Female medical professional representing Loyalty Health Care's human-centric values"
+            style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;"
+          >
+        </div>
+        <div class="card" style="border-left: 6px solid var(--color-secondary); padding: var(--space-lg);">
+          <span style="font-weight: 700; text-transform: uppercase; color: var(--color-secondary); letter-spacing: 1px; font-size: 0.85rem;">Meticulous Regulatory Commitment</span>
+          <h2 style="margin-top: var(--space-xs); margin-bottom: var(--space-md);">Healthcare Security Requires Strict Integrity</h2>
+          <p>At Loyalty Health Care, we firmly assert that compromised quality in pharmaceutical distribution constitutes an absolute human failure. Every batch number registered across our logistics facilities is tracked through a strict chain of custody, ensuring our healthcare systems maintain elite standards without compromise.</p>
+          <p style="font-weight: 600; color: var(--color-text);">— Managed Institutional Directive, Division Oversight Board</p>
+        </div>
       </div>
     </section>
 
     <!-- Action Directive Trigger Segment Gateway Section Box Layout Panel -->
     <section class="container section-padding text-center" style="padding-top: 0;">
-      <div class="card max-w-600" style="padding: var(--space-lg); background-color: var(--color-surface);">
+      <div class="card max-w-600" style="padding: var(--space-lg); background-color: var(--color-surface); margin-left: auto; margin-right: auto;">
         <h2>Secure Institutional Distribution Access</h2>
         <p>Coordinate procurement options or verify clinical supply schedules directly with our dedicated pharmaceutical logistics response unit.</p>
         <a href="contact.html" class="btn btn-secondary" style="margin-top: var(--space-xs);">Get in Touch &rarr;</a>
