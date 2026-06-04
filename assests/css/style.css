@@ -341,29 +341,61 @@ img, picture {
 .hamburger::before { top: -6px; }
 .hamburger::after { top: 6px; }
 
+/* ==========================================================================
+   UPDATED: MOBILE DROPDOWN ENGINE (Replaces the old sidebar logic)
+   ========================================================================== */
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
   }
 
   .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 280px;
-    height: 100vh;
-    background-color: var(--color-background);
-    box-shadow: -4px 0 24px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 80px; /* Aligns perfectly right underneath the 80px navbar header */
+    left: 0;
+    width: 100%;
+    
+    /* Smooth vertical accordion drop collapse initialization */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    
+    /* Menu inner layout transformation */
     flex-direction: column;
-    align-items: flex-start;
-    padding: 100px var(--space-md) var(--space-md) var(--space-md);
-    transition: right var(--transition-slow);
+    align-items: stretch;
+    background-color: var(--color-background);
+    padding: 0 var(--space-md);
+    border-bottom: 0px solid var(--color-border);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    
+    /* Unified animation timing framework */
+    transition: max-height var(--transition-slow), 
+                opacity var(--transition-base), 
+                padding var(--transition-base),
+                visibility var(--transition-base);
   }
 
+  /* Trigger state managed dynamically by your JavaScript main.js bundle */
   .nav-open .nav-menu {
-    right: 0;
+    max-height: 400px; /* Safe breathing room ceiling limit for link list stack */
+    opacity: 1;
+    visibility: visible;
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
   }
 
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu li a.nav-link {
+    display: block;
+    padding: var(--space-sm) 0 !important;
+  }
+
+  /* Structural Hamburger Transformation State */
   .nav-open .hamburger {
     background-color: transparent;
   }
