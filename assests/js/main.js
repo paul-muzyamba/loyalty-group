@@ -3,16 +3,6 @@
  */
 (function() {
   'use strict';
-
-  // Global Event Binding Orchestrator Initialization
-  document.addEventListener('DOMContentLoaded', function() {
-    initNavigation();
-    if (typeof initLoanEstimator === 'function') initLoanEstimator();
-    if (typeof initContactForm === 'function') initContactForm();
-    setActiveNavLink();
-    initDarkMode();
-  });
-
   /**
    * 1. Navigation Responsive Menu Interactivity Controls
    */
