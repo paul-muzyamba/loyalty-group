@@ -77,21 +77,15 @@
 
 html {
   scroll-behavior: smooth;
-  text-rendering: optimizeSpeed; /* Directs the browser engine to prioritize rendering speed over minor subpixel adjustments */
+  text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
 }
 
 /* Prevents layout shifting during theme switching */
 *, *::before, *::after {
   box-sizing: border-box;
-  transition: background-color 0.2s ease, border-color 0.2s ease; /* Fast, snappy transitions */
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.1s ease;
   font-family: var(--font-stack);
-  font-size: 16px; 
-  line-height: var(--line-height-body);
-  color: var(--color-text);
-  background-color: var(--color-background);
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -99,6 +93,8 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 main {
@@ -120,6 +116,8 @@ h3 { font-size: var(--font-size-h3); }
 p {
   margin-bottom: var(--space-md);
   color: var(--color-text-muted);
+  font-size: 1.2rem !important;      /* Larger comfortable body reading size */
+  line-height: 1.7 !important;       /* Clean breathing space between lines */
 }
 
 p:last-child {
@@ -800,16 +798,11 @@ input[type="range"]::-webkit-slider-thumb:hover {
    GLOBAL FOOTER STYLES
    ========================================================================== */
 .site-footer {
-  background-color: #111111;
   color: #FFFFFF;
   padding-top: var(--space-lg);
   padding-bottom: var(--space-md);
   margin-top: auto;
   border-top: 4px solid var(--color-secondary);
-}
-
-.site-footer h3, .site-footer h4 {
-  color: #FFFFFF;
 }
 
 .footer-grid {
@@ -872,12 +865,11 @@ input[type="range"]::-webkit-slider-thumb:hover {
   .footer-bottom {
     flex-direction: row;
   }
+}
 
-  /* ==========================================================================
-   LOYALTY GROUP - COMPLETE UI UPGRADES & OPTIMIZATIONS
+/* ==========================================================================
+   LOYALTY GROUP - USER TYPOGRAPHY UPGRADES
    ========================================================================== */
-
-/* 1. NAVIGATION HEADER TYPOGRAPHY UPGRADES (From Screenshot 2026-06-04 134854.png) */
 .site-header .logo-text, 
 .site-header h1, 
 .site-header .brand-name {
@@ -893,12 +885,6 @@ input[type="range"]::-webkit-slider-thumb:hover {
   transition: color 0.2s ease !important;
 }
 
-/* 2. MAIN BODY TEXT & TITLE UPGRADES */
-p {
-  font-size: 1.2rem !important;      /* Larger comfortable body reading size */
-  line-height: 1.7 !important;       /* Clean breathing space between lines */
-}
-
 .hero-content h1 {
   font-size: 3.8rem !important;      /* Bold impact landing titles */
   line-height: 1.15 !important;
@@ -912,15 +898,20 @@ p {
   font-size: 1.8rem !important;      /* Noticeable inner grid titles */
 }
 
-/* 3. PERSISTENT DARK MODE VARIABLE DEFINITIONS */
-[data-theme="dark"] {
-  --color-background: #121212;
-  --color-text: #F5F7F2;
-  --color-text-muted: #A0A0A0;
-  --color-surface: #1E1E1E;
-  --color-border: #333333;
+/* ==========================================================================
+   SPACING OPTIMIZATION: ABOUT PAGE HERO TO IMAGE GAP
+   ========================================================================== */
+.about-hero {
+  padding-bottom: 0.5rem !important;
 }
 
+.leadership-section {
+  padding-top: 1rem !important;
+}
+
+/* ==========================================================================
+   PERSISTENT DARK/LIGHT OVERRIDES & INTERFACES
+   ========================================================================== */
 [data-theme="dark"] body {
   background-color: var(--color-background) !important;
   color: var(--color-text) !important;
@@ -945,119 +936,15 @@ p {
   border: 1px solid #444444 !important;
 }
 
-/* 4. PERFORMANCE & RENDERING SPEED ENHANCEMENTS */
-html {
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  -webkit-font-smoothing: antialiased;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.1s ease;
-}
-
 @media (max-width: 992px) {
   .site-header .logo-text { font-size: 1.8rem !important; }
   .nav-menu { gap: 10px !important; }
   .nav-menu li a.nav-link { font-size: 1.1rem !important; }
-  }
-
-  /* ==========================================================================
-   LOYALTY GROUP - COMPLETE UI UPGRADES & OPTIMIZATIONS
-   ========================================================================== */
-
-/* 1. NAVIGATION HEADER TYPOGRAPHY UPGRADES (From Screenshot 2026-06-04 134854.png) */
-.site-header .logo-text, 
-.site-header h1, 
-.site-header .brand-name {
-  font-size: 2.2rem !important;      /* Makes LOYALTY GROUP branding text much larger */
-  font-weight: 800 !important;
-  letter-spacing: -0.03em !important;
 }
 
-.nav-menu li a.nav-link {
-  font-size: 1.35rem !important;     /* Makes all navigation text links larger and highly readable */
-  font-weight: 600 !important;       /* Gives links a bold, premium presence */
-  padding: 0.5rem 1rem !important;
-  transition: color 0.2s ease !important;
-}
-
-/* 2. MAIN BODY TEXT & TITLE UPGRADES */
-p {
-  font-size: 1.2rem !important;      /* Larger comfortable body reading size */
-  line-height: 1.7 !important;       /* Clean breathing space between lines */
-}
-
-.hero-content h1 {
-  font-size: 3.8rem !important;      /* Bold impact landing titles */
-  line-height: 1.15 !important;
-}
-
-.section-title {
-  font-size: 2.8rem !important;      /* Distinctly larger section headers */
-}
-
-.division-card h3 {
-  font-size: 1.8rem !important;      /* Noticeable inner grid titles */
-}
-
-/* 3. PERSISTENT DARK MODE VARIABLE DEFINITIONS */
-[data-theme="dark"] {
-  --color-background: #121212;
-  --color-text: #F5F7F2;
-  --color-text-muted: #A0A0A0;
-  --color-surface: #1E1E1E;
-  --color-border: #333333;
-}
-
-[data-theme="dark"] body {
-  background-color: var(--color-background) !important;
-  color: var(--color-text) !important;
-}
-
-[data-theme="dark"] .site-header {
-  background-color: rgba(18, 18, 18, 0.95) !important;
-  border-bottom: 1px solid #333333 !important;
-}
-
-[data-theme="dark"] .division-card, 
-[data-theme="dark"] .term-btn {
-  background-color: #1E1E1E !important;
-  color: #FFFFFF !important;
-  border-color: #333333 !important;
-}
-
-[data-theme="dark"] input, 
-[data-theme="dark"] textarea {
-  background-color: #1E1E1E !important;
-  color: #FFFFFF !important;
-  border: 1px solid #444444 !important;
-}
-
-/* 4. PERFORMANCE & RENDERING SPEED ENHANCEMENTS */
-html {
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  -webkit-font-smoothing: antialiased;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.1s ease;
-}
-
-@media (max-width: 992px) {
-  .site-header .logo-text { font-size: 1.8rem !important; }
-  .nav-menu { gap: 10px !important; }
-  .nav-menu li a.nav-link { font-size: 1.1rem !important; }
- }
-
- /* ==========================================================================
+/* ==========================================================================
    FOOTER CONTRAST & VISIBILITY HOTFIX (Light/Dark Theme Alignment)
    ========================================================================== */
-
-/* 1. DEFAULT LIGHT MODE HOOKS (Ensures perfect legibility against white backgrounds) */
 footer, 
 .site-footer,
 div[style*="background-color: var(--color-surface-alt)"] {
@@ -1070,24 +957,32 @@ footer h2,
 footer h3, 
 footer h4,
 footer .logo-text,
-footer strong {
+footer strong,
+.site-footer h3,
+.site-footer h4 {
   color: #111111 !important; 
-  display: block !important; /* Guarantees they don't hidden-collapse */
+  display: block !important;
 }
 
 /* Forces footer paragraph descriptions and list links to be highly readable */
 footer p, 
 footer li, 
-footer a {
+footer a,
+.site-footer p,
+.site-footer li,
+.site-footer a,
+.footer-description,
+.footer-links a,
+.footer-contact-info li {
   color: #444444 !important;
 }
 
-footer a:hover {
-  color: #4CAF50 !important; /* Keeps your branding accent pop on interaction */
+footer a:hover,
+.site-footer a:hover {
+  color: #4CAF50 !important;
 }
 
-
-/* 2. AUTOMATIC DARK MODE OVERRIDES (Switches smoothly when user toggles theme) */
+/* AUTOMATIC DARK MODE OVERRIDES */
 [data-theme="dark"] footer,
 [data-theme="dark"] .site-footer {
   background-color: #1A1A1A !important; /* Rich dark surface container */
@@ -1097,13 +992,20 @@ footer a:hover {
 [data-theme="dark"] footer h3,
 [data-theme="dark"] footer h4,
 [data-theme="dark"] footer .logo-text,
-[data-theme="dark"] footer strong {
+[data-theme="dark"] footer strong,
+[data-theme="dark"] .site-footer h3,
+[data-theme="dark"] .site-footer h4 {
   color: #FFFFFF !important; /* Crisp, bright white headings on dark backdrop */
 }
 
 [data-theme="dark"] footer p,
 [data-theme="dark"] footer li,
-[data-theme="dark"] footer a {
+[data-theme="dark"] footer a,
+[data-theme="dark"] .site-footer p,
+[data-theme="dark"] .site-footer li,
+[data-theme="dark"] .site-footer a,
+[data-theme="dark"] .footer-description,
+[data-theme="dark"] .footer-links a,
+[data-theme="dark"] .footer-contact-info li {
   color: #CCCCCC !important; /* Balanced silver-gray text to prevent eye strain */
- }
 }
