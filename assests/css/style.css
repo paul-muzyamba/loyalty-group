@@ -760,10 +760,9 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
 }
 section.section-padding { contain: layout style; }
 
-/* Lazy images: defer paint cost until near viewport */
+/* Lazy images: no content-visibility to avoid clipping */
 img[loading="lazy"] {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 200px;
+  will-change: auto;
 }
 
 /* Critical images: always paint immediately, no shift */
