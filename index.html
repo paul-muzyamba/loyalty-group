@@ -6,20 +6,15 @@
   <title>Loyalty Group — Ethical Ecosystem Portfolio Hub</title>
   <meta name="description" content="A trusted Zambian parent entity bridging ethical corporate micro-capital models and premium regulatory pharmaceutical systems under Isaac Loyalty Simbeye.">
   <meta name="theme-color" content="#1B5E20">
-  <!-- Critical hero image: preloaded for fastest LCP -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="preload" as="image" href="assests/images/Pharmacy.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="assests/images/Finance2.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="assests/images/Health Front.jpg" fetchpriority="high">
   <link rel="stylesheet" href="assests/css/style.css">
-  <!-- Inline theme script: runs before body paints — prevents flash of wrong theme -->
-  <script>
-    (function(){
-      var t = localStorage.getItem('loyalty-theme');
-      document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
-    })();
-  </script>
+  <script>(function(){var t=localStorage.getItem('loyalty-theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');})();</script>
 </head>
 <body id="headerElement">
 
-  <!-- Global Navigation -->
   <header class="site-header">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo" aria-label="Loyalty Group Hub Page">
@@ -44,7 +39,6 @@
   </header>
 
   <main>
-    <!-- HERO: Pharmacy.jpg full-bleed background -->
     <section class="hub-hero section-padding" style="
       position: relative;
       background-image: url('assests/images/Pharmacy.jpg');
@@ -56,9 +50,7 @@
       align-items: center;
       overflow: hidden;
     ">
-      <!-- Gradient overlay -->
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,30,10,0.72) 0%,rgba(10,30,10,0.55) 40%,rgba(10,30,10,0.80) 100%);z-index:0;" aria-hidden="true"></div>
-      <!-- Brand accent bar -->
       <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--color-primary),var(--color-secondary));z-index:2;" aria-hidden="true"></div>
 
       <div class="container" style="position:relative;z-index:1;">
@@ -69,7 +61,6 @@
         </div>
 
         <div class="gateway-split">
-          <!-- Gateway Card A: Loyalty Micro Finance -->
           <article class="gateway-card finance" style="backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);">
             <div class="gateway-content">
               <span class="gateway-badge">Capital Architecture</span>
@@ -85,7 +76,6 @@
             </div>
           </article>
 
-          <!-- Gateway Card B: Loyalty Health Care -->
           <article class="gateway-card health" style="backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);">
             <div class="gateway-content">
               <span class="gateway-badge">Pharmaceutical Care</span>

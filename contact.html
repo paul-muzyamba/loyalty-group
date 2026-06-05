@@ -6,6 +6,8 @@
   <title>Contact Center — Loyalty Group Communication Portal</title>
   <meta name="description" content="Reach our corporate offices in Roma or Mumbwa directly. Submit a validated inquiry instantly to our communication management desks.">
   <meta name="theme-color" content="#1B5E20">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preload" as="image" href="assests/images/Call center.jpg" fetchpriority="high">
   <link rel="stylesheet" href="assests/css/style.css">
   <script>(function(){var t=localStorage.getItem('loyalty-theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');})();</script>
 </head>
@@ -35,10 +37,8 @@
     </div>
   </header>
 
-    <!-- Form and Regional Information Block -->
   <main>
-    <header class="text-center max-w-600" style="margin-bottom: var(--space-lg);"></header>
-     <header class="text-center" style="
+    <header style="
       position: relative;
       background-image: url('assests/images/Call center.jpg');
       background-size: cover;
@@ -53,45 +53,79 @@
     ">
       <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,60,20,0.82) 0%,rgba(10,35,10,0.74) 100%);z-index:0;" aria-hidden="true"></div>
       <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--color-primary),var(--color-secondary));z-index:2;" aria-hidden="true"></div>
-      <div class="container max-w-600" style="position:relative;z-index:1;padding:var(--space-xl) 0;text-align:center;">
+      <div class="container" style="position:relative;z-index:1;padding:var(--space-xl) 0;text-align:center;">
         <h1 style="color:#ffffff;text-shadow:0 2px 16px rgba(0,0,0,0.45);">Contact Center</h1>
-        <p style="color:rgba(255,255,255,0.88);">Connect directly with our corporate offices. Our team ensures transparent communication across all channels with no hidden delays.</p>
+        <p class="max-w-600" style="color:rgba(255,255,255,0.88);">Connect directly with our corporate offices. Our team ensures transparent communication across all channels with no hidden delays.</p>
       </div>
-     </header>
-  </main>
-  <main class="container section-padding">
     </header>
 
-    <div class="contact-grid">
-      <!-- Regional Office Contact Card Columns -->
-      <aside aria-label="Physical Office Location Contact Nodes Elements Information Block">
-        <div style="display: flex; flex-direction: column; gap: var(--space-md);">
-          
-          <!-- Office Node Zone A: Lusaka -->
-          <article class="card" style="border-top: 4px solid var(--color-secondary);">
-            <span style="font-weight: 700; text-transform: uppercase; font-size: 0.8rem; color: var(--color-secondary); letter-spacing: 1px;">Corporate Headquarters</span>
-            <h3 style="margin-top: var(--space-xs);">Location A: Roma, Lusaka</h3>
-            <p style="font-size: 0.95rem; line-height: 1.6;">
-              <strong>Address Desk:</strong> Plot 42, Kakola Road, Roma Elite Area, Lusaka, Zambia<br>
-              <strong>Direct Line:</strong> +260 211 445 800<br>
-              <strong>Electronic Inbox:</strong> lusaka.desk@loyaltygroup.zm
-            </p>
-          </article>
+    <div class="container section-padding">
+      <div class="contact-grid">
 
-          <!-- Office Node Zone B: Mumbwa -->
-          <article class="card" style="border-top: 4px solid var(--color-primary);">
-            <span style="font-weight: 700; text-transform: uppercase; font-size: 0.8rem; color: var(--color-primary); letter-spacing: 1px;">Central Operations Hub</span>
-            <h3 style="margin-top: var(--space-xs);">Location B: Munengo, Mumbwa</h3>
-            <p style="font-size: 0.95rem; line-height: 1.6;">
-              <strong>Address Desk:</strong> Main Logistics Ring, Munengo Development Sector, Mumbwa, Zambia<br>
-              <strong>Direct Line:</strong> +260 215 884 110<br>
-              <strong>Electronic Inbox:</strong> mumbwa.desk@loyaltygroup.zm
-            </p>
-          </article>
-        </div>
-      </aside>
+        <aside aria-label="Regional Office Locations">
+          <div style="display: flex; flex-direction: column; gap: var(--space-md);">
 
-  <!-- Complete Global Site Footer Panel -->
+            <article class="card" style="border-top: 4px solid var(--color-secondary);">
+              <span style="font-weight: 700; text-transform: uppercase; font-size: 0.8rem; color: var(--color-secondary); letter-spacing: 1px;">Corporate Headquarters</span>
+              <h3 style="margin-top: var(--space-xs);">Location A: Roma, Lusaka</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6;">
+                <strong>Address Desk:</strong> Plot 42, Kakola Road, Roma Elite Area, Lusaka, Zambia<br>
+                <strong>Direct Line:</strong> +260 211 445 800<br>
+                <strong>Electronic Inbox:</strong> lusaka.desk@loyaltygroup.zm
+              </p>
+            </article>
+
+            <article class="card" style="border-top: 4px solid var(--color-primary);">
+              <span style="font-weight: 700; text-transform: uppercase; font-size: 0.8rem; color: var(--color-primary); letter-spacing: 1px;">Central Operations Hub</span>
+              <h3 style="margin-top: var(--space-xs);">Location B: Munengo, Mumbwa</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6;">
+                <strong>Address Desk:</strong> Main Logistics Ring, Munengo Development Sector, Mumbwa, Zambia<br>
+                <strong>Direct Line:</strong> +260 215 884 110<br>
+                <strong>Electronic Inbox:</strong> mumbwa.desk@loyaltygroup.zm
+              </p>
+            </article>
+
+          </div>
+        </aside>
+
+        <section aria-label="Inquiry Form">
+          <div class="card" style="padding: var(--space-lg);">
+            <h2 style="margin-bottom: var(--space-md);">Send Us a Message</h2>
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);" id="contactForm">
+              <div class="form-row">
+                <div class="form-group" id="fg-name">
+                  <label for="contactName">Full Name</label>
+                  <input id="contactName" type="text" class="input-style" placeholder="Your full name" autocomplete="name">
+                  <span class="error-message" id="err-name" style="display:none;">⚠ Please enter your name.</span>
+                </div>
+                <div class="form-group" id="fg-email">
+                  <label for="contactEmail">Email Address</label>
+                  <input id="contactEmail" type="email" class="input-style" placeholder="you@example.com" autocomplete="email">
+                  <span class="error-message" id="err-email" style="display:none;">⚠ Please enter a valid email.</span>
+                </div>
+              </div>
+              <div class="form-group" id="fg-subject">
+                <label for="contactSubject">Subject</label>
+                <input id="contactSubject" type="text" class="input-style" placeholder="Inquiry subject">
+                <span class="error-message" id="err-subject" style="display:none;">⚠ Please enter a subject.</span>
+              </div>
+              <div class="form-group" id="fg-msg">
+                <label for="contactMsg">Message</label>
+                <textarea id="contactMsg" class="input-style" rows="5" placeholder="Write your message here…" style="resize: vertical;"></textarea>
+                <span class="error-message" id="err-msg" style="display:none;">⚠ Please enter your message.</span>
+              </div>
+              <div>
+                <button type="button" class="btn btn-secondary" id="contactSubmit" style="width:100%;">Send Message &rarr;</button>
+                <p id="contactSuccess" style="display:none;color:var(--color-secondary);font-weight:600;margin-top:var(--space-sm);">✔ Message sent — we'll be in touch shortly.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
@@ -121,5 +155,37 @@
   </footer>
 
   <script src="assests/js/main.js"></script>
+  <script>
+    (function () {
+      var btn = document.getElementById('contactSubmit');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var name    = document.getElementById('contactName');
+        var email   = document.getElementById('contactEmail');
+        var subject = document.getElementById('contactSubject');
+        var msg     = document.getElementById('contactMsg');
+        var valid   = true;
+        [[name,'err-name','fg-name'],[email,'err-email','fg-email'],[subject,'err-subject','fg-subject'],[msg,'err-msg','fg-msg']].forEach(function(f){
+          var el=f[0],errId=f[1],fgId=f[2];
+          var fg=document.getElementById(fgId);
+          var err=document.getElementById(errId);
+          var isEmpty = !el.value.trim();
+          var isInvalidEmail = (el.type==='email' && !isEmpty && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value));
+          if(isEmpty||isInvalidEmail){fg.classList.add('invalid');err.style.display='flex';valid=false;}
+          else{fg.classList.remove('invalid');err.style.display='none';}
+        });
+        if(valid){
+          btn.disabled=true;
+          btn.textContent='Sending…';
+          setTimeout(function(){
+            document.getElementById('contactSuccess').style.display='block';
+            document.getElementById('contactForm').querySelectorAll('input,textarea').forEach(function(i){i.value='';});
+            btn.textContent='Send Message →';
+            btn.disabled=false;
+          },900);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
