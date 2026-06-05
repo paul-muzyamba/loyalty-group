@@ -5,17 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loyalty Group — Ethical Ecosystem Portfolio Hub</title>
   <meta name="description" content="A trusted Zambian parent entity bridging ethical corporate micro-capital models and premium regulatory pharmaceutical systems under Isaac Loyalty Simbeye.">
+  <meta name="theme-color" content="#1B5E20">
+  <!-- Critical hero image: preloaded for fastest LCP -->
+  <link rel="preload" as="image" href="assests/images/Pharmacy.jpg" fetchpriority="high">
   <link rel="stylesheet" href="assests/css/style.css">
+  <!-- Inline theme script: runs before body paints — prevents flash of wrong theme -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('loyalty-theme');
+      document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
+    })();
+  </script>
 </head>
 <body id="headerElement">
 
-  <!-- Global Strategic Navigation -->
+  <!-- Global Navigation -->
   <header class="site-header">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo" aria-label="Loyalty Group Hub Page">
         LOYALTY <span>GROUP</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Control Options" aria-expanded="false" aria-controls="primaryNav">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="primaryNav">
         <span class="hamburger"></span>
       </button>
       <nav id="primaryNav">
@@ -26,16 +36,15 @@
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="contact.html" class="nav-link">Contact Center</a></li>
           <li>
-            <button id="themeToggle" style="background: none; border: none; font-size: 1.2rem; cursor: pointer; padding: var(--space-xs);" aria-label="Toggle Theme Selection Layout">🌙</button>
+            <button id="themeToggle" style="background:none;border:none;font-size:1.2rem;cursor:pointer;padding:var(--space-xs);min-height:44px;min-width:44px;" aria-label="Toggle Theme">🌙</button>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Core Gateway Dual Split Hub Section Container -->
   <main>
-    <!-- HERO SECTION: Pharmacy.jpg as full-bleed background with layered overlay -->
+    <!-- HERO: Pharmacy.jpg full-bleed background -->
     <section class="hub-hero section-padding" style="
       position: relative;
       background-image: url('assests/images/Pharmacy.jpg');
@@ -47,78 +56,55 @@
       align-items: center;
       overflow: hidden;
     ">
-      <!-- Dark gradient overlay for legibility — two-layer: bottom-to-top dark base + subtle green tint at top -->
-      <div style="
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to bottom,
-          rgba(10, 30, 10, 0.72) 0%,
-          rgba(10, 30, 10, 0.55) 40%,
-          rgba(10, 30, 10, 0.80) 100%
-        );
-        z-index: 0;
-      "></div>
-      <!-- Subtle green accent bar at top edge for brand anchoring -->
-      <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--color-primary),var(--color-secondary));z-index:2;"></div>
+      <!-- Gradient overlay -->
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,30,10,0.72) 0%,rgba(10,30,10,0.55) 40%,rgba(10,30,10,0.80) 100%);z-index:0;" aria-hidden="true"></div>
+      <!-- Brand accent bar -->
+      <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--color-primary),var(--color-secondary));z-index:2;" aria-hidden="true"></div>
 
-      <div class="container" style="position: relative; z-index: 1;">
-        <div class="text-center max-w-600" style="margin: 0 auto var(--space-lg) auto;">
-          <!-- Eyebrow label -->
-          <span style="
-            display: inline-block;
-            background: rgba(82,196,26,0.18);
-            border: 1px solid var(--color-primary);
-            color: var(--color-primary);
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 0.35rem 1rem;
-            border-radius: 50px;
-            margin-bottom: var(--space-sm);
-          ">Zambia's Dual-Division Ethical Enterprise</span>
-          <h1 style="margin-bottom: var(--space-sm); color: #ffffff; text-shadow: 0 2px 16px rgba(0,0,0,0.45);">An Ecosystem Built on Unwavering Trust</h1>
-          <p style="color: rgba(255,255,255,0.88); font-size: 1.1rem; line-height: 1.7;">Established in 2022 under the stewardship of CEO Isaac Loyalty Simbeye, Loyalty Group securely anchors ethical deployment channels bridging fair capital access metrics and premium life-enhancing corporate pharmaceutical frameworks.</p>
+      <div class="container" style="position:relative;z-index:1;">
+        <div class="text-center max-w-600" style="margin:0 auto var(--space-lg) auto;">
+          <span style="display:inline-block;background:rgba(82,196,26,0.18);border:1px solid var(--color-primary);color:var(--color-primary);font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:50px;margin-bottom:var(--space-sm);">Zambia's Dual-Division Ethical Enterprise</span>
+          <h1 style="margin-bottom:var(--space-sm);color:#ffffff;text-shadow:0 2px 16px rgba(0,0,0,0.45);">An Ecosystem Built on Unwavering Trust</h1>
+          <p style="color:rgba(255,255,255,0.88);font-size:clamp(0.95rem,2.5vw,1.1rem);line-height:1.7;">Established in 2022 under the stewardship of CEO Isaac Loyalty Simbeye, Loyalty Group securely anchors ethical deployment channels bridging fair capital access metrics and premium life-enhancing corporate pharmaceutical frameworks.</p>
         </div>
 
         <div class="gateway-split">
-          <!-- Gateway Node A: Loyalty Micro Finance -->
-          <article class="gateway-card finance" style="background: rgba(255,255,255,0.96); backdrop-filter: blur(8px);">
+          <!-- Gateway Card A: Loyalty Micro Finance -->
+          <article class="gateway-card finance" style="backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);">
             <div class="gateway-content">
               <span class="gateway-badge">Capital Architecture</span>
               <h2>Loyalty Micro Finance</h2>
-              <p style="font-weight: 600; font-style: italic; color: var(--color-secondary); margin-bottom: var(--space-sm);">"Empowering Your Financial Future"</p>
+              <p style="font-weight:600;font-style:italic;color:var(--color-secondary);margin-bottom:var(--space-sm);">"Empowering Your Financial Future"</p>
               <p>Experience absolute corporate compliance transparency. Our specialized loan portfolios dismantle predatory mechanics to bring fair, accessible, and structured terms directly to your entrepreneurial horizons.</p>
             </div>
             <div>
-              <a href="finance.html" class="btn btn-primary" style="width: 100%;">Explore Capital Solutions &rarr;</a>
+              <a href="finance.html" class="btn btn-primary">Explore Capital Solutions &rarr;</a>
             </div>
           </article>
 
-          <!-- Gateway Node B: Loyalty Health Care -->
-          <article class="gateway-card health" style="background: rgba(255,255,255,0.96); backdrop-filter: blur(8px);">
+          <!-- Gateway Card B: Loyalty Health Care -->
+          <article class="gateway-card health" style="backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);">
             <div class="gateway-content">
               <span class="gateway-badge">Pharmaceutical Care</span>
               <h2>Loyalty Health Care</h2>
-              <p style="font-weight: 600; font-style: italic; color: var(--color-primary); margin-bottom: var(--space-sm);">Uncompromising Ethical Standards</p>
+              <p style="font-weight:600;font-style:italic;color:var(--color-primary);margin-bottom:var(--space-sm);">Uncompromising Ethical Standards</p>
               <p>Ensuring absolute delivery pipelines across premium, highly reliable, and meticulously regulated medical arrays. We place verified patient health integrity above sheer volume output numbers.</p>
             </div>
             <div>
-              <a href="health.html" class="btn btn-secondary" style="width: 100%;">Access Healthcare Solutions &rarr;</a>
+              <a href="health.html" class="btn btn-secondary">Access Healthcare Solutions &rarr;</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Deep Group Brand Foundations Statement Summary -->
-    <section class="section-padding" style="background-color: var(--color-surface); border-top: 1px solid var(--color-border);">
+    <!-- Brand Foundations Statement -->
+    <section class="section-padding" style="background-color:var(--color-surface);border-top:1px solid var(--color-border);">
       <div class="container">
-        <div class="grid-2" style="align-items: center;">
+        <div class="grid-2" style="align-items:center;">
           <div>
-            <span style="font-weight: 700; color: var(--color-secondary); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Our Absolute Baseline Foundation</span>
-            <h2 style="margin-top: var(--space-xs);">Integrity Over Numbers. People Over Metrics.</h2>
+            <span style="font-weight:700;color:var(--color-secondary);text-transform:uppercase;font-size:0.85rem;letter-spacing:1px;">Our Absolute Baseline Foundation</span>
+            <h2 style="margin-top:var(--space-xs);">Integrity Over Numbers. People Over Metrics.</h2>
           </div>
           <div class="statement-box">
             <p>We do not judge our corporate success by balance sheet margins alone. Across both micro-capital frameworks and life-saving pharmaceutical supplies, our systems optimize for human-centric empathy and explicit regulatory compliance parameters across Zambia.</p>
@@ -128,11 +114,10 @@
     </section>
   </main>
 
-  <!-- High-Fidelity Shared Footprint Base Layout Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <h3 style="margin-bottom: var(--space-sm);">LOYALTY GROUP</h3>
+        <h3 style="margin-bottom:var(--space-sm);">LOYALTY GROUP</h3>
         <p class="footer-description">A multi-divisional Zambian parent organization optimizing community structural advancement models through moral consistency and premium delivery values since 2022.</p>
       </div>
       <div>
