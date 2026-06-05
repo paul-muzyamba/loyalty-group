@@ -40,11 +40,24 @@
   <main>
 
     <!-- Page hero title -->
-    <section class="about-hero text-center" style="padding: var(--space-xl) 0;">
-      <div class="container">
-        <h1 class="section-title">Our Journey</h1>
-        <p style="font-style:italic;font-weight:600;color:var(--color-primary);margin-bottom:var(--space-xs);">Health, Security and a vision for better living. est 2022.</p>
-        <p class="max-w-600" style="margin:0 auto;font-size:clamp(1rem,2.5vw,1.25rem);">Building resilient community ecosystems through disciplined corporate operational structures.</p>
+    <section class="about-hero text-center" style="
+      position: relative;
+      background-image: url('assests/images/Journey.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      background-repeat: no-repeat;
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 0;
+    ">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,60,20,0.82) 0%,rgba(10,35,10,0.74) 100%);z-index:0;" aria-hidden="true"></div>
+      <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--color-primary),var(--color-secondary));z-index:2;" aria-hidden="true"></div>
+      <div class="container" style="position:relative;z-index:1;padding:var(--space-xl) 0;">
+        <h1 class="section-title" style="color:#ffffff;text-shadow:0 2px 16px rgba(0,0,0,0.45);">Our Journey</h1>
+        <p style="font-style:italic;font-weight:600;color:var(--color-secondary);margin-bottom:var(--space-xs);">Health, Security and a vision for better living. est 2022.</p>
+        <p class="max-w-600" style="margin:0 auto;font-size:clamp(1rem,2.5vw,1.25rem);color:rgba(255,255,255,0.88);">Building resilient community ecosystems through disciplined corporate operational structures.</p>
       </div>
     </section>
 
@@ -57,7 +70,7 @@
           <img
             src="assests/images/CEO image.jpg"
             alt="Isaac Loyalty Simbeye, Chief Executive Officer of Loyalty Group"
-            style="width:100%;max-width:260px;border-radius:var(--radius-md);box-shadow:var(--shadow-card);border:1px solid var(--color-border);aspect-ratio:1/1;object-fit:cover;"
+            style="width:100%;max-width:400px;border-radius:var(--radius-md);box-shadow:var(--shadow-card);border:1px solid var(--color-border);aspect-ratio:1/1;object-fit:cover;"
             loading="eager"
             fetchpriority="high"
             decoding="async"
@@ -107,7 +120,7 @@
         <ul class="footer-contact-info">
           <li>Primary Office: Roma, Lusaka, Zambia</li>
           <li>Electronic Desk: info@loyaltygroup.zm</li>
-          <li>Regional Support: Contact Center</li>
+          <li>Regional Support: Contact Center Portal</li>
         </ul>
       </div>
     </div>
