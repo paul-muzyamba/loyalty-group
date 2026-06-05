@@ -110,11 +110,11 @@
     var currentPage = (window.location.pathname.split('/').pop() || 'index.html');
 
     var heroImages = {
-      'index.html':   ['assests/images/Pharmacy.jpg', 'assests/images/Finance2.jpg', 'assests/images/Health Front.jpg'],
-      'finance.html': ['assests/images/Loan Cash.jpg', 'assests/images/Deal.jpg'],
-      'health.html':  ['assests/images/Pharmacy3.jpg', 'assests/images/Medicine3.jpg', 'assests/images/Counselling.jpg'],
-      'about.html':   ['assests/images/Journey.jpg', 'assests/images/CEO image.jpg'],
-      'contact.html': ['assests/images/Call Center.jpg']
+      'index.html':   ['assets/images/Pharmacy.jpg', 'assets/images/Finance2.jpg', 'assets/images/Health Front.jpg'],
+      'finance.html': ['assets/images/Loan Cash.jpg', 'assets/images/Deal.jpg'],
+      'health.html':  ['assets/images/Pharmacy3.jpg', 'assets/images/Medicine3.jpg', 'assets/images/Counselling.jpg'],
+      'about.html':   ['assets/images/Journey.jpg', 'assets/images/CEO image.jpg'],
+      'contact.html': ['assets/images/Call Center.jpg']
     };
 
     var queue = [];

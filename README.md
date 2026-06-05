@@ -27,7 +27,7 @@ The entire project is built natively using lightweight, vanilla web technologies
 ## 📂 Project Structure
 
 ```text
-├── assests/
+├── assets/
 │   ├── css/
 │   │   └── style.css       # Core stylesheet, typography variables, & theme overrides
 │   ├── js/

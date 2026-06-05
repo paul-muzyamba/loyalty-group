@@ -8,8 +8,8 @@
   <meta name="theme-color" content="#1B5E20">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <!-- Preload hero image -->
-  <link rel="preload" as="image" href="assests/images/Loan Cash.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="assests/css/style.css">
+  <link rel="preload" as="image" href="assets/images/LoanCash.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/style.css">
   <script>
     (function(){
       var t = localStorage.getItem('loyalty-theme');
@@ -44,19 +44,19 @@
 
   <main>
 
-    <!-- HERO: Loan Cash.jpg full-bleed -->
+    <!-- HERO: LoanCash.jpg full-bleed -->
     <header class="division-hero-header" style="
       position: relative;
-      background-image: url('assests/images/Loan Cash.jpg');
+      background-image: url('assets/images/LoanCash.jpg');
       background-size: cover;
-      background-position: center 45%;
+      background-position: center 40%;
       background-repeat: no-repeat;
       overflow: hidden;
     ">
       <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,60,20,0.82) 0%,rgba(10,35,10,0.74) 100%);z-index:0;" aria-hidden="true"></div>
       <div class="container" style="position:relative;z-index:1;">
         <img
-          src="assests/images/WhatsApp Image 2026-06-04 at 11.20.33 (1).jpeg"
+          src="assets/images/MicroLogo.jpeg"
           alt="Loyalty Micro Finance Corporate Logo"
           class="division-logo"
           loading="eager"
@@ -98,10 +98,11 @@
         <!-- Deal.jpg image strip -->
         <div style="border-radius:var(--radius-md);overflow:hidden;margin-bottom:var(--space-lg);max-height:260px;box-shadow:var(--shadow-card);position:relative;">
           <img
-            src="assests/images/Deal.jpg"
+            src="assets/images/Deal.jpg"
             alt="Professional handshake symbolising transparent lending agreements"
             style="width:100%;height:260px;object-fit:cover;object-position:center 40%;display:block;"
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
             decoding="async"
             width="1200" height="260"
           >
@@ -119,10 +120,11 @@
           <div class="card" style="background-color:var(--color-background);padding:0;overflow:hidden;">
             <div style="overflow:hidden;height:200px;">
               <img
-                src="assests/images/Loan Agreement.jpg"
-                alt="Loan agreement document representing individual lending services"
+                src="assets/images/LoanAgreement.jpg"
+                alt="LoanAgreement document representing individual lending services"
                 style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.4s ease;"
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
                 decoding="async"
                 width="600" height="200"
                 onmouseover="this.style.transform='scale(1.05)'"
@@ -142,10 +144,11 @@
           <div class="card" style="background-color:var(--color-background);padding:0;overflow:hidden;">
             <div style="overflow:hidden;height:200px;">
               <img
-                src="assests/images/Loan Estimate.jpg"
+                src="assets/images/LoanEstimate.jpg"
                 alt="Financial estimate document representing SME and business growth capital"
                 style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.4s ease;"
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
                 decoding="async"
                 width="600" height="200"
                 onmouseover="this.style.transform='scale(1.05)'"
@@ -202,6 +205,6 @@
     </div>
   </footer>
 
-  <script src="assests/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
